@@ -2,16 +2,39 @@
 
 Welcome to the ScanForTheFuture Android QR Application project! This open-source initiative aims to develop a state-of-the-art QR code scanner app that generates revenue through in-app advertisements and purchases. The proceeds will be directed towards social good, focusing on environmental protection, education, and supporting disadvantaged communities.
 
+🌐 [Live Website](https://qr-website-one.vercel.app/)
+
+---
+
 ## Project Overview
 
-The goal of this project is to create an Android application that is not only technologically advanced but also socially responsible. By leveraging the power of QR technology, we aim to make a positive impact on the world.
+Scan For The Future aims to be a **technologically modern** and **socially responsible** mobile QR solution. Developed with **React Native** and compatible with **Expo Go**, this app provides fast QR scanning and creation tools, while contributing to a better world.
+
+The project generates revenue via **non-intrusive in-app ads and optional purchases**, and donates proceeds to **verified nonprofits**, tailored to the user's country and preferences.
+
 
 ## Features
 
-- **Fast and Accurate QR Code Scanning:** Utilize the latest technologies to ensure quick and reliable scanning.
-- **In-App Advertising:** Generate revenue through non-intrusive, user-friendly ads.
-- **In-App Purchases:** Offer premium features for users who wish to support our mission.
-- **Social Impact:** Donate proceeds to global charities focused on important causes.
+- **🔍 Fast & Secure QR Code Scanning**  
+  Blazing fast scanning powered by modern libraries with a focus on **link/content validation** to avoid fraud and malicious QR content.
+
+- **📤 QR Code Generation**  
+  Create QR codes for contact info, URLs, phone numbers, Wi-Fi access, and more.
+
+- **💸 In-App Ads & Purchases**  
+  User-friendly monetization to support global causes.
+
+- **🌍 Social Impact Model**  
+  Proceeds will be directed to causes including:
+  - Tree planting & combating drought 🌳  
+  - Education access (including coding education) 📚  
+  - Earthquake and disaster aid 🏚️  
+  - Child welfare and equality campaigns 🧒  
+  - FreeCodeCamp and similar organizations 💻
+
+- **🌐 Multilingual & Global-Friendly**  
+  Designed to be used by people from all countries, with regionally adapted donation paths.
+
 
 ## Getting Started
 
