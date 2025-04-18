@@ -25,12 +25,43 @@ The project generates revenue via **non-intrusive in-app ads and optional purcha
   User-friendly monetization to support global causes.
 
 - **🌍 Social Impact Model**  
-  Proceeds will be directed to causes including:
-  - Tree planting & combating drought 🌳  
-  - Education access (including coding education) 📚  
-  - Earthquake and disaster aid 🏚️  
-  - Child welfare and equality campaigns 🧒  
-  - FreeCodeCamp and similar organizations 💻
+  All proceeds from the app will be donated to verified nonprofit organizations that work in alignment with the United Nations Sustainable Development Goals (UN SDGs). These include:
+
+🌱 Environmental Protection & Climate Action
+
+Tree planting, reforestation, and forest preservation (SDG 13, 15)
+
+Combating drought and desertification (SDG 15)
+
+Clean water access and ocean preservation (SDG 6, 14)
+
+🎓 Education for All
+
+Access to quality education for underprivileged children (SDG 4)
+
+Support for global coding and digital literacy programs, including FreeCodeCamp (SDG 4, 9)
+
+⚖️ Social Justice & Equality
+
+Gender equality and empowerment for women and girls (SDG 5)
+
+Inclusion programs for disadvantaged or marginalized communities (SDG 10)
+
+🧒 Child Welfare & Basic Needs
+
+Fighting hunger and extreme poverty (SDG 1, 2)
+
+Supporting child protection and humanitarian aid projects
+
+🏚️ Disaster Relief & Community Resilience
+
+Earthquake and natural disaster emergency support
+
+Resilient infrastructure development and recovery efforts (SDG 11)
+
+🐾 Animal Welfare & Biodiversity
+
+Support for organizations protecting wildlife, endangered species, and animal shelters (SDG 15)
 
 - **🌐 Multilingual & Global-Friendly**  
   Designed to be used by people from all countries, with regionally adapted donation paths.
