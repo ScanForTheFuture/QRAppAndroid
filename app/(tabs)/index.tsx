@@ -1,11 +1,15 @@
 import { useEffect, useState } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Modal } from 'react-native';
 import { CameraView, CameraType, useCameraPermissions } from 'expo-camera';
 import { useRouter } from 'expo-router';
+import { parseQRContent } from '@/utils/qrContentParser';
+import URLPreview from '@/components/QRContent/URLPreview';
+import { Camera, Camera as FlipCamera } from 'lucide-react-native';
 
 export default function ScanScreen() {
   const [facing, setFacing] = useState<CameraType>('back');
   const [permission, requestPermission] = useCameraPermissions();
+  const [scannedContent, setScannedContent] = useState<{ type: string; data: any } | null>(null);
   const router = useRouter();
 
   if (!permission) {
@@ -31,8 +35,8 @@ export default function ScanScreen() {
   }
 
   const handleBarCodeScanned = ({ type, data }: { type: string; data: string }) => {
-    // Handle the scanned data here
-    alert(`Bar code with type ${type} and data ${data} has been scanned!`);
+    const parsedContent = parseQRContent(data);
+    setScannedContent(parsedContent);
   };
 
   return (
@@ -43,16 +47,31 @@ export default function ScanScreen() {
         barcodeScannerSettings={{
           barCodeTypes: ['qr'],
         }}
-        onBarcodeScanned={handleBarCodeScanned}
+        onBarcodeScanned={scannedContent ? undefined : handleBarCodeScanned}
       >
         <View style={styles.overlay}>
-          <View style={styles.scanArea} />
+          <View style={styles.scanArea}>
+            <Camera size={32} color="#fff" style={styles.scanIcon} />
+          </View>
+          
           <TouchableOpacity
             style={styles.flipButton}
             onPress={() => setFacing(current => (current === 'back' ? 'front' : 'back'))}
           >
-            <Text style={styles.flipButtonText}>Flip Camera</Text>
+            <FlipCamera size={24} color="#fff" />
           </TouchableOpacity>
+
+          {scannedContent && (
+            <View style={styles.previewContainer}>
+              {scannedContent.type === 'url' && (
+                <URLPreview 
+                  url={scannedContent.data.url} 
+                  onClose={() => setScannedContent(null)}
+                />
+              )}
+              {/* Add other content type previews here */}
+            </View>
+          )}
         </View>
       </CameraView>
     </View>
@@ -79,6 +98,11 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: '#fff',
     backgroundColor: 'transparent',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  scanIcon: {
+    opacity: 0.7,
   },
   flipButton: {
     position: 'absolute',
@@ -86,11 +110,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(255,255,255,0.2)',
     padding: 15,
     borderRadius: 25,
-  },
-  flipButtonText: {
-    color: '#fff',
-    fontSize: 18,
-    fontWeight: '600',
   },
   message: {
     color: '#fff',
@@ -109,5 +128,12 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 16,
     fontWeight: '600',
+  },
+  previewContainer: {
+    position: 'absolute',
+    bottom: 100,
+    left: 20,
+    right: 20,
+    alignItems: 'center',
   },
 });
