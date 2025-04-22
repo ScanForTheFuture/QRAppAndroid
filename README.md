@@ -111,3 +111,17 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 
 ## Contact
 For more information or if you're interested in collaborating, please contact  me on Linkedin.
+
+## 🙌 To Support Us
+
+If you find **Scan for the Future** valuable and want to support its development and sustainability, here are two ways to contribute:
+
+- 💖 [Become a Patron on Patreon](https://patreon.com/TheKarapetti)  
+  Support ongoing development, unlock ad-free features, and get early access to new ideas.
+
+- 💚 [Support us via Kreosus](https://kreosus.com/thekarapetti) *(local platform)*  
+  Contribute to the project through a privacy-respecting platform based in Turkey. All contributions go directly toward hosting, design, and community growth.
+
+Your support helps us grow, keep the app open-source, and focused on public good.  
+Thank you!
+
